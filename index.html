@@ -37,7 +37,7 @@
                                     <div id="logo">
                                         <a href="index.html">
                                             <img class="logo-main" src="media/logo/loggi.png" alt style="width: 10%!important;"/>
-                                            <img class="logo-mobile" src="media/logo/loggi.png" alt style="height: 10%!important;" />
+                                            <img class="logo-mobile" src="media/logo/loggi.png" alt style="width: 10%!important;" />
                                         </a>
                                         
                                     </div>
@@ -85,13 +85,49 @@
                             <h1>Private <span class="color-gradient">Chat</span> App </h1>
                             <p>Stop third parties from spying on you and get ready for an amazing and private experience. Download our app now and get the most secure and privacy oriantated chat app availavle.</p>
                             <a href="https://play.google.com/store/apps/details?id=org.protdos.encochat" class="btn-main">Download Now</a>
-                            <span id="menu-btn"></span>
                             <div class="spacer-10" style="background-color: black;"></div>
                         </div>
                         <div class="col-lg-4 offset-lg-1">
                             <div class="spacer-single sm-hide"></div>
                             <div class="col-lg-6 wow fadeInUp">
-                                <img src="media/ui-showcase.webp" alt width="300%">
+                                <img class="showcase-main" src="media/ui-showcase.webp" alt width="300%">
+                                <img class="showcase-mobile" src="media/ui-showcase.webp" alt width="100%">
+                                <style>
+                                    /* CSS for desktop (screens with a width of 992px or more) */
+                                    @media (min-width: 992px) {
+                                    .showcase-main {
+                                        display: block; /* Show the main image */
+                                    }
+
+                                    .showcase-mobile {
+                                        display: none; /* Hide the mobile image */
+                                    }
+                                    }
+
+                                    /* CSS for mobile devices (screens with a width of less than 992px) */
+                                    @media (max-width: 991px) {
+                                    .showcase-main {
+                                        display: none; /* Hide the main image */
+                                    }
+
+                                    .col-lg-6 {
+                                        position: relative;
+                                        overflow: hidden; /* Hide the overflow to clip the image */
+                                        float: right; /* Float the container to the right */
+                                    }
+
+                                    .col-lg-6 h1 {
+                                        display: inline;
+                                    }
+
+                                    .showcase-mobile {
+                                        display: block; /* Show the mobile image */
+                                        position:absolute;
+                                        width:100%;
+                                        margin-left: -50%;
+                                    }
+                                    }
+                                </style>
                             </div>
                         </div>
                     </div>
