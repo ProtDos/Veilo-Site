@@ -772,6 +772,7 @@ hr {
 #header .navbar {
   padding: 0px;
   min-height: 70px;
+  background: #111418;
 }
 #header .logo {
   -webkit-box-align: center;
@@ -804,7 +805,6 @@ hr {
   -ms-flex-item-align: stretch;
   align-self: stretch;
   background: #fff;
-  border-bottom: 1px solid #efefef;
 }
 .primary-menu.bg-transparent {
   position: absolute;
