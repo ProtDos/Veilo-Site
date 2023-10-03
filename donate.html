@@ -38,7 +38,7 @@
                                     <div id="logo">
                                         <a href="index.html">
                                             <img class="logo-main" src="media/logo/loggi.png" alt style="width: 10%!important;"/>
-                                            <img class="logo-mobile" src="media/logo/loggi.png" alt style="height: 10%!important;" />
+                                            <img class="logo-mobile" src="media/logo/loggi.png" alt style="width: 10%!important;" />
                                         </a>
                                         
                                     </div>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="https://play.google.com/store/apps/details?id=org.protdos.encochat" class="btn-main">Download</a>
+                                    <a href="download.html" class="btn-main">Download</a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -85,15 +85,34 @@
                         <div class="col-lg-6">
                             <h1>Private <span class="color-gradient">Chat</span> App </h1>
                             <p>Stop third parties from spying on you and get ready for an amazing and private experience. Download our app now and get the most secure and privacy oriantated chat app availavle.</p>
-                            <a href="https://play.google.com/store/apps/details?id=org.protdos.encochat" class="btn-main">Download Now</a>
-                            <span id="menu-btn"></span>
+                            <a href="download.html" class="btn-main">Download Now</a>
                             <div class="spacer-10" style="background-color: black;"></div>
                         </div>
-                            <div class="col-lg-4 offset-lg-1">
-                                <div class="spacer-single sm-hide"></div>
-                                <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
-                                <iframe src="https://donorbox.org/embed/veilo" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important; filter: brightness(80%);"></iframe>
-                            </div>
+                        <div class="spacer-40" style="background-color: black;"></div>
+                        <div class="col-lg-4 offset-lg-1">
+                            <div class="spacer-single sm-hide"></div>
+                            <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+                            <iframe src="https://donorbox.org/embed/veilo" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important; filter: brightness(80%);" class="myiframe"></iframe>
+                        </div>
+                            <style>
+                                /* CSS for desktop (screens with a width of 992px or more) */
+                                @media (min-width: 992px) {
+                                    .spacer-40 {
+                                        display: none; /* Hide the mobile image */
+                                    }
+                                    }
+
+                                    /* CSS for mobile devices (screens with a width of less than 992px) */
+                                    @media (max-width: 991px) {
+                                    .spacer-40 {
+                                        display: block; /* Hide the main image */
+                                    }
+                                    .myiframe {
+                                        display: block;
+                                        margin: 0 auto;
+                                    }
+                                    }
+                            </style>
                     </div>
                 </div>
                 <br>

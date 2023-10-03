@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
-    <title>Veilo - Imprint</title>
+    <title>Veilo - Download</title>
     <link rel="icon" href="media/logo/loggi.png" type="image/gif" sizes="16x16" height="10%">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="Secure your communication now and ensure that nobody know and reads about your messages. Join now!">
@@ -80,61 +80,92 @@
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
             <section id="section-hero" aria-label="section" style="height: 100%!important;">
+                <div class="spacer-50" style="background-color: black;"></div>
+                <div class="spacer-50" style="background-color: black;"></div>
+                <div class="spacer-50" style="background-color: black;"></div>
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
-                            <h1>Private <span class="color-gradient">Chat</span> App </h1>
-                            <p>Stop third parties from spying on you and get ready for an amazing and private experience. Download our app now and get the most secure and privacy oriantated chat app availavle.</p>
-                            <a href="download.html" class="btn-main">Download Now</a>
+                            <h1>Download <span class="color-gradient">Veilo</span></h1>
+                            <p>Learn more about the security of our app by checking nout this report, done by an non-influential third company. Verify yourself now.</p>
+                            <a class="btn-main" id="viewbtn">Download</a>
+                            
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    const scrollToTopButton = document.getElementById("viewbtn");
+
+                                    scrollToTopButton.addEventListener("click", function(event) {
+                                        event.preventDefault();
+                                        scrollToElement();
+                                    });
+
+                                    function scrollToElement() {
+                                        const spacerElement = document.querySelector(".ajsdasad");
+                                        if (spacerElement) {
+                                            console.log("yea");
+                                            spacerElement.scrollIntoView({
+                                            behavior: "smooth",
+                                            block: "start"
+                                            });
+                                        }
+                                    }
+                                });
+                            </script>
+
                             <span id="menu-btn"></span>
                             <div class="spacer-10" style="background-color: black;"></div>
                         </div>
                             <div class="col-lg-4 offset-lg-1">
-                                <div class="spacer-single sm-hide"></div>
-                                <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
-                                <iframe src="https://donorbox.org/embed/veilo" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important; filter: brightness(80%);"></iframe>
+                                <img class="img-fluid anim-up-down" src="media/report.svg" alt>
                             </div>
                     </div>
                 </div>
                 <br>
                 <div class="spacer-50" style="background-color: black;"></div>
                 <div class="spacer-50" style="background-color: black;"></div>
+                <div class="spacer-50" style="background-color: black;"></div>
             </section>
             <section>
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 wow fadeInUp">
-                            <img class="img-fluid anim-up-down" src="media/donate.svg" alt width="70%">
-                        </div>
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="p-sm-30 pb-sm-0 mb-sm-0">
-                                <h2>Why <span class="color-gradient">donating</span> keeps us alive </h2>
-                                <p>Donating to Veilo, the non-profit organization dedicated to secure chatting, is essential because it keeps us alive in the digital age. Your contributions directly support the development and maintenance of this vital messaging platform, ensuring that individuals around the world can communicate privately and securely. Veilo relies on donations to fund its operations, enhance security measures, and innovate to stay ahead of emerging threats. By donating, you actively contribute to the continued existence and evolution of a platform that safeguards our digital privacy and freedom of communication.</p>
-                                <div class="spacer-half"></div>
-                                <a class="btn-main" href="" id="scrollToTop">Donate Now</a>
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", function() {
-                                        const scrollToTopButton = document.getElementById("scrollToTop");
+                        <div class="col-lg-6">
+                            <h1>Download for <span class="color-gradient">Mobile</span></h1>
 
-                                        scrollToTopButton.addEventListener("click", function(event) {
-                                            event.preventDefault();
-                                            scrollToTop();
-                                        });
-
-                                        function scrollToTop() {
-                                            const scrollDuration = 1000; // Duration in milliseconds
-                                            const scrollStep = -window.scrollY / (scrollDuration / 15);
-                                            const scrollInterval = setInterval(function() {
-                                                if (window.scrollY !== 0) {
-                                                    window.scrollBy(0, scrollStep);
-                                                } else {
-                                                    clearInterval(scrollInterval);
-                                                }
-                                            }, 15);
-                                        }
-                                    });
-                                </script>
+                            <div class="col-lg-6 offset-lg-1">
+                                <img class="img-fluid" src="media/mobile.svg" alt style="width: 120%!important;">
+                                <div class="spacer-50" style="background-color: black;"></div>
                             </div>
+                            <a class="btn-main" id="viewbtn" href="https://play.google.com/store/apps/details?id=org.protdos.encochat">Android</a>                               
+                            <a class="btn-main" id="viewbtn" href="coming_soon.html">IPhone or IPad</a>
+                        </div>
+                        <div class="spacer-40" style="background-color: black;"></div>
+                        <style>
+                            /* CSS for desktop (screens with a width of 992px or more) */
+                            @media (min-width: 992px) {
+                            .spacer-40 {
+                                display: none;
+                            }
+                            }
+
+                            /* CSS for mobile devices (screens with a width of less than 992px) */
+                            @media (max-width: 991px) {
+                            .spacer-40 {
+                                display: block;
+                            }
+                            }
+                        </style>
+
+                        <div class="col-lg-6">
+                            <h1>Download for <span class="color-gradient">Desktop</span></h1>
+                            <div class="spacer-60" style="background-color: black;"></div>
+                            <div class="col-lg-6 offset-lg-1">
+                                <img class="img-fluid" src="media/desktop.svg" alt style="width: 120%!important;">
+                                <div class="spacer-50" style="background-color: black;"></div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-lg-6"><a class="btn-main" id="viewbtn" href="coming_soon.html">Windows</a></div>                                
+                            </div>
+
                         </div>
                     </div>
                 </div>
