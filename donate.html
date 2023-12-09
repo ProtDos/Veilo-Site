@@ -19,15 +19,23 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
     <link href="css/test.css" rel="stylesheet" type="text/css"/>
 
+    <link href="burger_css.css" rel="stylesheet" type="text/css" />
+
     <link id="colors" href="css/scheme-07.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="dark-scheme">
+    <div id="overlay" class="hidden">
+        <a href="#about" class="mobile-item" onclick="closeBurger()"><h1>ABOUT</h1></a>
+        <a href="#work" class="mobile-item" onclick="closeBurger()"><h1>WORK</h1></a>
+        <a href="#services" class="mobile-item" onclick="closeBurger()"><h1>SERVICES</h1></a>
+      </div>
+
     <div id="wrapper">
 
         <div id="de-loader"></div>
 
-        <header class="transparent has-topbar">
+        <header class="transparent has-topbar" style="background-color: #000; z-index: 9999;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -49,33 +57,65 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li>
+                                        <a class="menu-item" href="download.html" style="color: #00ff16;" id="getter">GET</a>
+                                    </li>
+                                    <li>
                                         <a class="menu-item" href="index.html">HOME</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="help.html">HELP</a>
                                     </li>
                                     <li>
-                                        <a class="menu-item" href="blog.html">BLOG</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-item" href="docs.html">DOCS</a>
+                                        <a class="menu-item" href="docs/index.html">DOCS</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="donate.html">DONATE</a>
                                     </li>
                                 </ul>
                             </div>
+
+                            <div class="flex items-center" id="whole_thing">
+                                <div class="burger">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!--
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
                                     <a href="download.html" class="btn-main">Download</a>
                                     <span id="menu-btn"></span>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+
+        <script>
+            let pressed = false;
+            const burger = document.querySelector('.burger');
+        
+            burger.addEventListener('click', () => {
+              burger.classList.toggle('active');
+              if (pressed == false) {
+                document.getElementById('overlay').classList.remove('hidden');
+                pressed = true;
+              } else { 
+                document.getElementById('overlay').classList.add('hidden');
+                pressed = false;
+              }
+              
+            });
+        
+            function closeBurger() {
+                burger.classList.toggle('active');
+                document.getElementById('overlay').classList.add('hidden');
+                pressed = false;
+            }
+            
+        </script>
 
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
@@ -83,16 +123,16 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
-                            <h1>Private <span class="color-gradient">Chat</span> App </h1>
-                            <p>Stop third parties from spying on you and get ready for an amazing and private experience. Download our app now and get the most secure and privacy orientated chat app availavle.</p>
-                            <a href="download.html" class="btn-main">Download Now</a>
+                            <h1>Donate <span class="color-gradient">Now</span> </h1>
+                            <p>Donating to us would be really helpful. As we don't sell any products or data we are dependent on donations like yours.</p>
+                            <a href="https://paypal.me/xoding" class="btn-main">Donate otherwise</a>
                             <div class="spacer-10" style="background-color: black;"></div>
                         </div>
                         <div class="spacer-40" style="background-color: black;"></div>
                         <div class="col-lg-4 offset-lg-1">
                             <div class="spacer-single sm-hide"></div>
                             <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
-                            <iframe src="https://donorbox.org/embed/veilo" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important; filter: brightness(80%);" class="myiframe"></iframe>
+                            <iframe src="https://donorbox.org/embed/veilo" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important; filter: brightness(90%);" class="myiframe"></iframe>
                         </div>
                             <style>
                                 /* CSS for desktop (screens with a width of 992px or more) */
