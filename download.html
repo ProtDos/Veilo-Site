@@ -147,13 +147,13 @@
                     <div class="section2">
                       <h2>Section 1</h2>
                       <img src="media/mobile.svg" alt="Mobile Image">
-                        <a class="centered-button" id="viewbtn" href="coming_soon.html">APK</a>
+                        <a class="btn-main centered-button" id="viewbtn" href="coming_soon.html">APK</a>
                     </div>
                 
                     <div class="section2">
                       <h2>Section 2</h2>
                       <img src="media/desktop.svg" alt="Desktop Image">
-                      <a class="centered-button" id="viewbtn" href="coming_soon.html">Windows</a>
+                      <a class="btn-main centered-button" id="viewbtn" href="coming_soon.html">Windows</a>
                     </div>
                   </div>
             </section>
@@ -170,7 +170,7 @@
                 }
             
                 .section2 img {
-                  max-width: 100%;
+                  max-width: 80%;
                   height: auto;
                 }
             
@@ -179,6 +179,12 @@
                   text-align: center;
                   text-decoration: none;
                   cursor: pointer;
+                }
+
+                  @media (max-width: 768px) {
+                  .section2 {
+                    flex: 100%;
+                  }
                 }
               </style>
             
