@@ -35,7 +35,7 @@ html, body {
 
 /*===============================*/
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 969px) {
     .burger {
         width: 20px;
         height: 15px;
@@ -51,7 +51,7 @@ html, body {
     }
   }
   
-  @media only screen and (min-width: 971px) {
+  @media only screen and (min-width: 970px) {
     .burger {
         width: 0%;
         height: 0px;
