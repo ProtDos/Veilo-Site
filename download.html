@@ -19,15 +19,23 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
     <link href="css/test.css" rel="stylesheet" type="text/css"/>
 
+    <link href="burger_css.css" rel="stylesheet" type="text/css" />
+
     <link id="colors" href="css/scheme-07.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="dark-scheme">
+    <div id="overlay" class="hidden">
+        <a href="#about" class="mobile-item" onclick="closeBurger()"><h1>ABOUT</h1></a>
+        <a href="#work" class="mobile-item" onclick="closeBurger()"><h1>WORK</h1></a>
+        <a href="#services" class="mobile-item" onclick="closeBurger()"><h1>SERVICES</h1></a>
+      </div>
+
     <div id="wrapper">
 
         <div id="de-loader"></div>
 
-        <header class="transparent has-topbar">
+        <header class="transparent has-topbar" style="background-color: #000; z-index: 9999;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -49,33 +57,41 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li>
+                                        <a class="menu-item" href="download.html" style="color: #00ff16;" id="getter">GET</a>
+                                    </li>
+                                    <li>
                                         <a class="menu-item" href="index.html">HOME</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="help.html">HELP</a>
                                     </li>
                                     <li>
-                                        <a class="menu-item" href="blog.html">BLOG</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-item" href="docs.html">DOCS</a>
+                                        <a class="menu-item" href="docs/index.html">DOCS</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="donate.html">DONATE</a>
                                     </li>
                                 </ul>
                             </div>
+
+                            <div class="flex items-center" id="whole_thing">
+                                <div class="burger">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!--
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
                                     <a href="download.html" class="btn-main">Download</a>
                                     <span id="menu-btn"></span>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
 
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
