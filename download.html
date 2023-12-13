@@ -22,6 +22,84 @@
     <link href="burger_css.css" rel="stylesheet" type="text/css" />
 
     <link id="colors" href="css/scheme-07.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+    
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 5%;
+            padding-right: 5%;
+
+        }
+
+        .container3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            align-items: center;
+            text-align: center;
+
+            gap: 10px; 
+
+        }
+    
+        .section {
+            flex: 1;
+            padding: 80px;
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+            
+        }
+    
+        .section img {
+            max-width: 100%;
+            height: auto;
+            width: 80%; /* Adjust the width as needed */
+            vertical-align: middle; /* Align images vertically in the middle */
+            margin: 0 auto; /* Center the image horizontally */
+            padding-bottom: 8%;
+        }
+    
+        .centered-button {
+            color: #000;
+            background: var(--primary-color);           
+            
+            display: block;
+            font-family: var(--title-font);
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+                    
+            outline: 0;           
+            padding: 6px 40px;
+            margin-top: auto;
+            cursor: pointer;
+
+            border: none;
+            border-radius: 30px;
+
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+
+        }
+    
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+          .section {
+            flex: 100%;
+          }
+        }
+      </style>
+
 </head>
 
 <body class="dark-scheme">
@@ -141,69 +219,28 @@
                 <div class="spacer-50" style="background-color: black;"></div>
                 <div class="spacer-50" style="background-color: black;"></div>
             </section>
-
+            
             <section>
-                <div class="container2">
-                    <div class="section2">
-                      <h2>Section 1</h2>
-                      <img src="media/mobile.svg" alt="Mobile Image">
-                        <a class="centered-button" id="viewbtn" href="coming_soon.html">APK</a>
+            <div class="container2">
+                <div class="section">
+                    <h2>Section 1</h2>
+                    <img src="media/mobile.svg" alt="Image 1">
+                    <div class="container3">
+                        <a href="#" class="centered-button">Play Store</a>
+                        <a href="#" class="centered-button">APK</a>
+                        <a href="#" class="centered-button">IPhone</a>
                     </div>
-                
-                    <div class="section2">
-                      <h2>Section 2</h2>
-                      <img src="media/desktop.svg" alt="Desktop Image">
-                      <a class="centered-button" id="viewbtn" href="coming_soon.html">Windows</a>
-                    </div>
-                  </div>
-            </section>
+                </div>
 
-              <style>            
-                .container2 {
-                  display: flex;
-                }
-            
-                .section2 {
-                  flex: 1;
-                  padding: 20px;
-                  text-align: center;
-                }
-            
-                .section2 img {
-                  max-width: 100%;
-                  height: auto;
-                  width: 80%:
-                }
-            
-                .centered-button {
-                  display: block;
-                  text-align: center;
-                  text-decoration: none;
-                  cursor: pointer;
+                <div class="section">
+                    <h2>Section 2</h2>
+                    <img src="media/desktop.svg" alt="Image 2">
+                    <a href="#" class="centered-button">Windows</a>
+                </div>
+            </div>
+        </section>
 
-                    font-family: var(--title-font);
-                    color: #000;
-                    border-radius: 30px;
-                    -moz-border-radius: 30px;
-                    -webkit-border-radius: 30px;
-                    outline: 0;
-                    font-weight: 800;
-                    text-decoration: none;
-                    padding: 6px 40px;
-                    font-size: 14px;
-                    border: none;
-                    
-                    background: var(--primary-color);
 
-                }
-
-                  @media (max-width: 768px) {
-                  .section2 {
-                    flex: 100%;
-                  }
-                }
-              </style>
-            
             <!--
             <section>
                 <div class="container">
