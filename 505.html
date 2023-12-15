@@ -4,8 +4,8 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
-    <title>Veilo - 505</title>
-    <link rel="icon" href="media/logo/loggi.png" type="image/gif" sizes="16x16" height="10%">
+    <title>Veilo - 404</title>
+    <link rel="icon" href="media/logo/loggi.png" type="image/gif" sizes="16x16" height="10%" id="favicon">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="Secure your communication now and ensure that nobody know and reads about your messages. Join now!">
     <meta name="keywords" content="signal, messaging, secure, private, chat, quantum, chatting, Veilo, meta, meta-data">
@@ -18,15 +18,25 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
 
+    <link href="burger_css.css" rel="stylesheet" type="text/css" />
+
     <link id="colors" href="css/scheme-07.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="dark-scheme">
+    <div id="overlay" class="hidden">
+        <a href="index.html" class="mobile-item" onclick="closeBurger()"><h1>HOME</h1></a>
+        <a href="download.html" class="mobile-item" onclick="closeBurger()"><h1 style="color: #00ff16;">GET</h1></a>
+        <a href="help.html" class="mobile-item" onclick="closeBurger()"><h1>HELP</h1></a>
+        <a href="docs/index.html" class="mobile-item" onclick="closeBurger()"><h1>DOCS</h1></a>
+        <a href="donate.html" class="mobile-item" onclick="closeBurger()"><h1>DONATE</h1></a>
+      </div>
+
     <div id="wrapper">
 
         <div id="de-loader"></div>
 
-        <header class="transparent has-topbar">
+        <header class="transparent has-topbar" style="background-color: #000; z-index: 9999;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -37,7 +47,7 @@
                                     <div id="logo">
                                         <a href="index.html">
                                             <img class="logo-main" src="media/logo/loggi.png" alt style="width: 10%!important;"/>
-                                            <img class="logo-mobile" src="media/logo/loggi.png" alt style="height: 10%!important;" />
+                                            <img class="logo-mobile" src="media/logo/loggi.png" alt style="width: 10%!important;" />
                                         </a>
                                         
                                     </div>
@@ -48,26 +58,26 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li>
+                                        <a class="menu-item" href="download.html" style="color: #00ff16;" id="getter">GET</a>
+                                    </li>
+                                    <li>
                                         <a class="menu-item" href="index.html">HOME</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="help.html">HELP</a>
                                     </li>
                                     <li>
-                                        <a class="menu-item" href="blog.html">BLOG</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-item" href="iDocs-main/index.html">DOCS</a>
+                                        <a class="menu-item" href="docs/index.html">DOCS</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="donate.html">DONATE</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="de-flex-col">
-                                <div class="menu_side_area">
-                                    <a href="download.html" class="btn-main">Download</a>
-                                    
+
+                            <div class="flex items-center" id="whole_thing">
+                                <div class="burger">
+                                    <span></span>
                                 </div>
                             </div>
                         </div>
@@ -83,9 +93,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <h1>Error <span class="color-gradient">505</span></h1>
-                            <p>Looks like we have problems on our end.</p>
+                            <p>Error 505</p>
                             <a href="download.html" class="btn-main">Download Now</a>
-                            
                             <div class="spacer-10" style="background-color: black;"></div>
                         </div>
                         <div class="col-lg-4 offset-lg-1">
@@ -106,14 +115,14 @@
 
         <footer>
             <div class="container">
-                <div class="row g-custom-x">
-                    <div class="col-lg-4">
+                <div class="row g-custom-x" style="padding-bottom: 0px; height: auto !important; background-size: 2% !important;">
+                    <div class="col-lg-4" style="padding-bottom: 0px; height: auto !important; background-size: auto !important;">
                         <img src="media/logo/loggi.png" alt height="10%"/>
                         <div class="spacer-20"></div>
                         <p>Stop third parties from spying on you and get ready for an amazing and private experience. Download our app now and get the most secure and privacy orientated chat app availavle.</p>
                         <div class="spacer-10"></div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="padding-bottom: 0px; height: auto !important; background-size: auto !important;">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="widget">
@@ -137,6 +146,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            
                             <div class="col-lg-6">
                                 <div class="widget">
                                     <h5>Download</h5>
@@ -158,14 +168,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="padding-bottom: 0px; height: auto !important; background-size: auto !important;">
                         <div class="widget">
                             <h5>Newsletter</h5>
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                            <form action="newsletter.php" class="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
+                            <form class="row form-dark" id="form_subscribe" method="get" name="form_subscribe">
                                 <div class="col text-center">
                                     <input class="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="Your email" type="text" />
-                                    <a href="#" id="btn-subscribe">
+                                    <a href="#" id="btn-subscribe" type="submit">
                                         <i class="arrow_right bg-color-secondary"></i>
                                     </a>
                                     <div class="clearfix"></div>
@@ -192,48 +202,49 @@
                             <div class="widget">
                                 <h5>Follow Us on</h5>
                                 <div class="social-icons">
-                                    <a href="https://www.youtube.com/@veilo">
+                                    <a href="#">
                                         <i class="fa fa-youtube fa-lg"></i>
                                     </a>
-                                    <a href="https://www.twitter.com/veilo">
+                                    <a href="#">
                                         <i class="fa fa-twitter fa-lg"></i>
                                     </a>
-                                    <a href="https://github.com/veilo">
+                                    <a href="https://github.com/Veilo-Official">
                                         <i class="fa fa-github fa-lg"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="de-flex">
-                                <div class="de-flex-col">
-                                    <a href="index.html"> Copyright 2023 - Veilo </a>
+                
+                    <div class="subfooter">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="de-flex">
+                                        <div class="de-flex-col">
+                                            <a href="index.html"> Copyright 2023 - Veilo </a>
+                                        </div>
+                                        <ul class="menu-simple">
+                                            <li>
+                                                <a href="tos.html">Terms of Service</a>
+                                            </li>
+                                            <li>
+                                                <a href="privacy-policy.html">Privacy Policy</a>
+                                            </li>
+                                            <li>
+                                                <a href="imprint.html">Imprint</a>
+                                            </li>
+                                            <li>
+                                                <a href="transparency_report.html">Transparency Report</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="menu-simple">
-                                    <li>
-                                        <a href="#">Terms of Service</a>
-                                    </li>
-                                    <li>
-                                        <a href="privacy-policy.html">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Imprint</a>
-                                    </li>
-                                    <li>
-                                        <a href="transparency_report.html" target="_blank" rel="noopener noreferrer" >Transparency Report</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>           
         </footer>
 
     </div>
@@ -243,6 +254,8 @@
     <script src="js/landing/home.js" type="81380ab297ee668479ac0151-text/javascript"></script>
 
     <script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="81380ab297ee668479ac0151-|49" defer></script>
+
+    <script src="icon_change.js"></script>
 </body>
 
 </html>
