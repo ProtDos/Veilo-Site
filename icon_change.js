@@ -13,23 +13,25 @@ document.addEventListener('DOMContentLoaded', function () {
     darkModeQuery.addEventListener('change', changeFavicon);
 });
 
-let pressed = false;
-const burger = document.querySelector('.burger');
+document.addEventListener('DOMContentLoaded', function () {
+    let pressed = false;
+    const burger = document.querySelector('.burger');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    if (pressed == false) {
-    document.getElementById('overlay').classList.remove('hidden');
-    pressed = true;
-    } else { 
-    document.getElementById('overlay').classList.add('hidden');
-    pressed = false;
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        if (pressed == false) {
+        document.getElementById('overlay').classList.remove('hidden');
+        pressed = true;
+        } else { 
+        document.getElementById('overlay').classList.add('hidden');
+        pressed = false;
+        }
+        
+    });
+
+    function closeBurger() {
+        burger.classList.toggle('active');
+        document.getElementById('overlay').classList.add('hidden');
+        pressed = false;
     }
-    
 });
-
-function closeBurger() {
-    burger.classList.toggle('active');
-    document.getElementById('overlay').classList.add('hidden');
-    pressed = false;
-}
