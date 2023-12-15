@@ -49,6 +49,11 @@ html, body {
         top: 25%;
         
     }
+
+    #whole_thing {
+        display: block;
+        width: auto;
+    }
   }
   
   @media only screen and (min-width: 970px) {
@@ -63,6 +68,11 @@ html, body {
         visibility: hidden;
         display: none;
         
+    }
+
+    #whole_thing {
+        display: none;
+        width: 0;
     }
 
   }
@@ -160,3 +170,4 @@ html, body {
     margin-bottom: 0;
 }
 
+/* Test */
