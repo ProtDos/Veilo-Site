@@ -7,22 +7,7 @@
     <title>Veilo - Private Chatting</title>
     <link rel="icon" id="favicon" href="media/logo/loggi.png" type="image/gif" sizes="16x16" height="10%">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            const changeFavicon = () => {
-                const favicon = document.getElementById('favicon');
-                if (darkModeQuery.matches) {
-                    favicon.href = 'media/logo/loggi.png';
-                } else {
-                    favicon.href = 'media/logo/image2vector.svg';
-                }
-            };
-            
-            changeFavicon();
-            darkModeQuery.addEventListener('change', changeFavicon);
-        });
-    </script>
+    <script src="icon_change.js"></script>
     
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="Secure your communication now and ensure that nobody know and reads about your messages. Join now!">

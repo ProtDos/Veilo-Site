@@ -12,6 +12,8 @@
     <meta name="theme-color" content="#00ff16" />
     <meta property="og:image" content="media/logo/loggi.png" height="10%">
 
+    <script src="icon_change.js"></script>
+
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap" />
     <link href="css/mdb.min.css" rel="stylesheet" type="text/css" id="mdb" />
     <link href="css/plugins.css" rel="stylesheet" type="text/css" />
@@ -19,15 +21,23 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
     <link href="css/test.css" rel="stylesheet" type="text/css"/>
 
+    <link href="burger_css.css" rel="stylesheet" type="text/css" />
+
     <link id="colors" href="css/scheme-07.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="dark-scheme">
+    <div id="overlay" class="hidden">
+        <a href="#about" class="mobile-item" onclick="closeBurger()"><h1>ABOUT</h1></a>
+        <a href="#work" class="mobile-item" onclick="closeBurger()"><h1>WORK</h1></a>
+        <a href="#services" class="mobile-item" onclick="closeBurger()"><h1>SERVICES</h1></a>
+      </div>
+
     <div id="wrapper">
 
         <div id="de-loader"></div>
 
-        <header class="transparent has-topbar">
+        <header class="transparent has-topbar" style="background-color: #000; z-index: 9999;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -49,26 +59,26 @@
                             <div class="de-flex-col header-col-mid">
                                 <ul id="mainmenu">
                                     <li>
+                                        <a class="menu-item" href="download.html" style="color: #00ff16;" id="getter">GET</a>
+                                    </li>
+                                    <li>
                                         <a class="menu-item" href="index.html">HOME</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="help.html">HELP</a>
                                     </li>
                                     <li>
-                                        <a class="menu-item" href="blog.html">BLOG</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu-item" href="docs.html">DOCS</a>
+                                        <a class="menu-item" href="docs/index.html">DOCS</a>
                                     </li>
                                     <li>
                                         <a class="menu-item" href="donate.html">DONATE</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="de-flex-col">
-                                <div class="menu_side_area">
-                                    <a href="download.html" class="btn-main">Download</a>
-                                    <span id="menu-btn"></span>
+
+                            <div class="flex items-center" id="whole_thing">
+                                <div class="burger">
+                                    <span></span>
                                 </div>
                             </div>
                         </div>
@@ -76,6 +86,31 @@
                 </div>
             </div>
         </header>
+
+
+        <script>
+            let pressed = false;
+            const burger = document.querySelector('.burger');
+        
+            burger.addEventListener('click', () => {
+              burger.classList.toggle('active');
+              if (pressed == false) {
+                document.getElementById('overlay').classList.remove('hidden');
+                pressed = true;
+              } else { 
+                document.getElementById('overlay').classList.add('hidden');
+                pressed = false;
+              }
+              
+            });
+        
+            function closeBurger() {
+                burger.classList.toggle('active');
+                document.getElementById('overlay').classList.add('hidden');
+                pressed = false;
+            }
+            
+        </script>
 
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
@@ -137,14 +172,14 @@
 
         <footer>
             <div class="container">
-                <div class="row g-custom-x">
-                    <div class="col-lg-4">
+                <div class="row g-custom-x" style="padding-bottom: 0px; height: auto !important; background-size: 2% !important;">
+                    <div class="col-lg-4" style="padding-bottom: 0px; height: auto !important; background-size: auto !important;">
                         <img src="media/logo/loggi.png" alt height="10%"/>
                         <div class="spacer-20"></div>
                         <p>Stop third parties from spying on you and get ready for an amazing and private experience. Download our app now and get the most secure and privacy orientated chat app availavle.</p>
                         <div class="spacer-10"></div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="padding-bottom: 0px; height: auto !important; background-size: auto !important;">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="widget">
@@ -168,6 +203,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            
                             <div class="col-lg-6">
                                 <div class="widget">
                                     <h5>Download</h5>
@@ -189,14 +225,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="padding-bottom: 0px; height: auto !important; background-size: auto !important;">
                         <div class="widget">
                             <h5>Newsletter</h5>
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                            <form action="newsletter.php" class="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
+                            <form class="row form-dark" id="form_subscribe" method="get" name="form_subscribe">
                                 <div class="col text-center">
                                     <input class="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="Your email" type="text" />
-                                    <a href="#" id="btn-subscribe">
+                                    <a href="#" id="btn-subscribe" type="submit">
                                         <i class="arrow_right bg-color-secondary"></i>
                                     </a>
                                     <div class="clearfix"></div>
@@ -223,48 +259,49 @@
                             <div class="widget">
                                 <h5>Follow Us on</h5>
                                 <div class="social-icons">
-                                    <a href="https://www.youtube.com/@veilo">
+                                    <a href="#">
                                         <i class="fa fa-youtube fa-lg"></i>
                                     </a>
-                                    <a href="https://www.twitter.com/veilo">
+                                    <a href="#">
                                         <i class="fa fa-twitter fa-lg"></i>
                                     </a>
-                                    <a href="https://github.com/veilo">
+                                    <a href="https://github.com/Veilo-Official">
                                         <i class="fa fa-github fa-lg"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="de-flex">
-                                <div class="de-flex-col">
-                                    <a href="index.html"> Copyright 2023 - Veilo </a>
+                
+                    <div class="subfooter">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="de-flex">
+                                        <div class="de-flex-col">
+                                            <a href="index.html"> Copyright 2023 - Veilo </a>
+                                        </div>
+                                        <ul class="menu-simple">
+                                            <li>
+                                                <a href="tos.html">Terms of Service</a>
+                                            </li>
+                                            <li>
+                                                <a href="privacy-policy.html">Privacy Policy</a>
+                                            </li>
+                                            <li>
+                                                <a href="imprint.html">Imprint</a>
+                                            </li>
+                                            <li>
+                                                <a href="transparency_report.html">Transparency Report</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="menu-simple">
-                                    <li>
-                                        <a href="#">Terms of Service</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Imprint</a>
-                                    </li>
-                                    <li>
-                                        <a href="transparency_report.html">Transparency Report</a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>           
         </footer>
 
     </div>
