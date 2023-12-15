@@ -19,15 +19,18 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
 
     <link href="burger_css.css" rel="stylesheet" type="text/css" />
+    <script src="icon_change.js"></script>
 
     <link id="colors" href="css/scheme-07.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="dark-scheme">
     <div id="overlay" class="hidden">
-        <a href="#about" class="mobile-item" onclick="closeBurger()"><h1>ABOUT</h1></a>
-        <a href="#work" class="mobile-item" onclick="closeBurger()"><h1>WORK</h1></a>
-        <a href="#services" class="mobile-item" onclick="closeBurger()"><h1>SERVICES</h1></a>
+        <a href="index.html" class="mobile-item" onclick="closeBurger()"><h1>HOME</h1></a>
+        <a href="download.html" class="mobile-item" onclick="closeBurger()"><h1 style="color: #00ff16;">GET</h1></a>
+        <a href="help.html" class="mobile-item" onclick="closeBurger()"><h1>HELP</h1></a>
+        <a href="docs/index.html" class="mobile-item" onclick="closeBurger()"><h1>DOCS</h1></a>
+        <a href="donate.html" class="mobile-item" onclick="closeBurger()"><h1>DONATE</h1></a>
       </div>
 
     <div id="wrapper">
@@ -90,31 +93,6 @@
                 </div>
             </div>
         </header>
-
-
-        <script>
-            let pressed = false;
-            const burger = document.querySelector('.burger');
-        
-            burger.addEventListener('click', () => {
-              burger.classList.toggle('active');
-              if (pressed == false) {
-                document.getElementById('overlay').classList.remove('hidden');
-                pressed = true;
-              } else { 
-                document.getElementById('overlay').classList.add('hidden');
-                pressed = false;
-              }
-              
-            });
-        
-            function closeBurger() {
-                burger.classList.toggle('active');
-                document.getElementById('overlay').classList.add('hidden');
-                pressed = false;
-            }
-            
-        </script>
 
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
