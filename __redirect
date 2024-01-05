@@ -1,3 +1,4 @@
+/chat/* /download.html 301
 * 404.html 404
 * 301.html 301
 * 403.html 403
@@ -7,4 +8,3 @@
 * 505.html 505
 * 410.html 410
 * 405.html 405
-/chat/* /download.html 301
